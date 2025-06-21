@@ -21,7 +21,7 @@ var nextId = 0;
 // функция, которая листает в низ дива
 function scrollToBottom(div) {
   let height = div.scrollHeight;
-  console.log(height);
+  //console.log(height);
   chatBody.scrollIntoView(false);
   //div.scrollTop = height;
   //div.scrollTop.behavior = 'smooth';
@@ -250,7 +250,7 @@ function manageChat() {
   var tabsId = document.getElementsByClassName('active-tab')[0].id;
   var storedInfo = tabsStorage[tabsId];
   
-  console.log(chatBody.scrollHeight);
+  //console.log(chatBody.scrollHeight);
 
   // сохранение отправленного сообщения пользователя в tabsStorage к текущей открытой вкладке
   if (storedInfo) {
