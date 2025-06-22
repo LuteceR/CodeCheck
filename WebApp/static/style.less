@@ -100,6 +100,35 @@
     transition: all 0.1s ease-in-out;
 }
 
+.dropdown-menu {
+    span {
+        margin-top: 0.6rem;
+    }
+
+    #download-moodle-xml {
+        margin-left: 1rem;
+        height: 46px;
+        width: 46px;
+        align-items: center;
+        align-content: center;
+
+        img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
+
+#category, #nameOfFile {
+    border: none;
+    &::placeholder {
+        color: #d9d9d9;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
 #export, #add-test, #add-tab {
     @height: 3vh;
     font-size: 1rem;
@@ -116,8 +145,8 @@
         transition: all 0.3s ease-in-out;
 
         margin-left: 0.5rem;
-        width: 1rem;
-        height: 1rem;
+        width: 0.8rem;
+        height: 0.8rem;
         align-self: center;
     }
     
