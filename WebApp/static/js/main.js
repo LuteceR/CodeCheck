@@ -18,15 +18,6 @@ var tabsStorage = {
 };
 var nextId = 0;
 
-// функция, которая листает в низ дива
-function scrollToBottom(div) {
-  let height = div.scrollHeight;
-  //console.log(height);
-  chatBody.scrollIntoView(false);
-  //div.scrollTop = height;
-  //div.scrollTop.behavior = 'smooth';
-};
-
 //позволяет делать спуск в поле текста на shift+enter
 function textareaInput(event) 
 {
@@ -171,9 +162,6 @@ $("#delete-tab").click(function(event) {
   if (check) {
     document.getElementsByClassName("sidebar-pair")[0].click();
   }
-  // if (tab.classList.includes('active-tab')) {
-  //   document.getElementsByClassName("sidebar-pair")[0].classList.add('selected-tab');
-  // }
 
   document.getElementById('contextmenu-tabs').className = 'hidden contextmenu';
 });
@@ -567,7 +555,7 @@ function download() {
 };
 
 // скрипт будет запущен тогда, когда прогрузится HTML страница с стилями 
-$(document).ready(function(){
+$(document).ready(function() {
   // создание начальной вкладки
   createTab();
   let startTab = document.getElementsByClassName('sidebar-pair')[0];
