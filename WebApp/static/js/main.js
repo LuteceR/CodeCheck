@@ -29,6 +29,16 @@ function textareaInput(event)
   };
 }
 
+function nameOfFileInput(event) 
+{
+  let value = event.which;
+
+  if (value == 13 && !event.shiftKey){
+    event.preventDefault();
+    download();
+  };
+}
+
 function inputTabName(event) 
 {
   let value = event.which;
