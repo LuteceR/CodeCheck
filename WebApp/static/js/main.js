@@ -450,9 +450,15 @@ downloadXmlFile.addEventListener('click', function(event) {
 
 // скачивание тестов и задания в формате moodle xml с плагином coderunner
 function download() {
-  var selectedQuestion = document.getElementsByClassName('chat user')[0].firstChild.textContent;
-  var amountOfTests = document.getElementsByClassName('test-box').length;
-  var selectedSolution = document.getElementsByClassName('selected-solution')[0].firstChild.firstChild.firstChild.textContent;
+  // проверка на наличие первого сообщения пользователя, тестов и решений
+  if (document.getElementsByClassName('chat user')[0] && document.getElementsByClassName('test-box') && document.getElementsByClassName('selected-solution')[0]) {
+    var selectedQuestion = document.getElementsByClassName('chat user')[0].firstChild.textContent;
+    var amountOfTests = document.getElementsByClassName('test-box').length;
+    var selectedSolution = document.getElementsByClassName('selected-solution')[0].firstChild.firstChild.firstChild.textContent;
+  } else {
+    console.log("отсутствует необходимый элемент");
+    return;
+  }
 
   if (nameOfFile.value != '') {
     var filename = nameOfFile.value;
